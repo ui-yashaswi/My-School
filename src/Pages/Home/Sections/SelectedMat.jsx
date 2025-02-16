@@ -27,7 +27,7 @@ function SelectedMat() {
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
         Selected Material
       </h1>
-      <div className="flex gap-6 flex-wrap justify-center lg:px-20">
+      <div className="flex gap-6 flex-wrap justify-center lg:px-20 ">
         {cardsData.map((item, index) => (
           <PrimaryCard key={index} image={item.image} text={item.text} />
         ))}

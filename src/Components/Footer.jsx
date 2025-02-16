@@ -7,9 +7,13 @@ function Footer() {
   return (
     <div className="w-full h-full ">
       {/* _________________footer________________________ */}
-      <div className="w-full h-full bg-[#1e1d1d] px-20 lg:px-20">
-        <div className="w-full h-full justify-between   flex py-10 ">
-          <img className=" h-9 bg-center object-cover" src={logo} alt="" />
+      <div className="w-full h-full  bg-[#1e1d1d] px-4 lg:px-20">
+        <div className="w-full h-full justify-between items-center lg:flex-row flex-col  flex py-10 ">
+          <img
+            className=" lg:h-9 lg:px-0 px-24 lg:pb-0 pb-10 bg-pik-400  bg-center object-cover"
+            src={logo}
+            alt=""
+          />
 
           <div className="flex items-center">
             <input
@@ -26,7 +30,7 @@ function Footer() {
         {/* _____________________text________________ */}
 
         <div>
-          <div className="flex lg:flex-row flex-col gap-10 py-10 w-full">
+          <div className="flex lg:flex-row  flex-col gap-10 py-10 w-full">
             <div className="">
               <h2 className="text-xl font-semibold mb-4 text-white">
                 Earn Money
@@ -112,8 +116,8 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-center w-full pb-12">
-          <h1 className="text-gray-400">
+        <div className="flex justify-center  w-full pb-12">
+          <h1 className="text-gray-400 text-center">
             ©All rights reserved to schooltools 2025
           </h1>
         </div>

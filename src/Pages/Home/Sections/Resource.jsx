@@ -17,17 +17,17 @@ const resources = [
 
 function Resource() {
   return (
-    <div>
+    <div className="lg:px-28 px-4 ">
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
         Artist & Painters
       </h1>
 
       {/* ✅ Flex wrap with 5 images per row */}
-      <div className="w-full h-full my-20 px-28 flex flex-wrap justify-center gap-4">
+      <div className="w-full h-full my-20  flex flex-wrap justify-center gap-4">
         {resources.map((item, index) => (
           <div
             key={index}
-            className="relative w-[19%] h-[34vh] border-zinc-100 my-2 border-2 overflow-hidden"
+            className="relative lg:w-[19%] w-[90vw] h-[34vh] border-zinc-100 my-2 border-2 overflow-hidden"
           >
             <img
               className="w-full h-full object-cover object-center"

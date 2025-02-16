@@ -10,14 +10,17 @@ const cards = [
 
 function ActivityBlog() {
   return (
-    <div className="px-24">
+    <div className=" lg:px-28 px-4">
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
         Activity Blog{" "}
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-6 py-4 ">
+      <div className="flex flex-wrap justify-between gap-6 py-4 ">
         {cards.map((item, index) => (
-          <div key={index} className="relative w-[40vw] h-[35vh] rounded-lg ">
+          <div
+            key={index}
+            className="relative lg:w-[41vw] w-[90vw] h-[35vh] rounded-lg "
+          >
             <img
               src={item.img}
               alt={`Card ${index + 1}`}

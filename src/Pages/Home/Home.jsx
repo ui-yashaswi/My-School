@@ -11,17 +11,17 @@ import DrawingCraft from "./Sections/DrawingCraft";
 import ActivityBlog from "./Sections/ActivityBlog";
 import Footer from "../../Components/Footer";
 import banner from "/icons/footerBanner.png";
-import NavSecondery from "../../Components/NavSecondery";
+import SchoolPackage from "./Sections/SchoolPackage";
 // import AddToCart from "../../AddToCard";
 
 function Home() {
   return (
     <div>
       <NavLg />
-      <NavSecondery />
       <Carousel />
       <MySchool />
       <ArtPaint />
+      <SchoolPackage />
       <Resource />
       <CoreSub />
       <MainCategory />
