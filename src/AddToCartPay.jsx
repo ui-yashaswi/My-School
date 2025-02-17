@@ -25,7 +25,9 @@ const AddToCard_pay = () => {
           "Prime Pack",
           "Products",
         ].map((item, index) => (
-          <h1 key={index}>{item}</h1>
+          <h1 key={index} className="cursor-pointer px-2 py-1">
+            {item}
+          </h1>
         ))}
       </div>
 
