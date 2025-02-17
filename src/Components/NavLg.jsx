@@ -1,18 +1,20 @@
 import React from "react";
 import logo from "/icons/ST-logo.png";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavLg() {
   return (
-    <div className="px-28 fixed top-0 left-0 z-20 w-full bg-white hidden lg:flex flex-col">
-      <div className=" w-full h-20 bg-pink-10 flex items-center   border-b-zinc-100 justify-between">
+    <div className="fixed top-0 left-0 z-20 w-full bg-white hidden lg:flex flex-col">
+      <div className=" px-28  w-full h-20 bg-pink-10 flex items-center   border-b-zinc-100 justify-between">
         <img className=" h-9 bg-center object-cover" src={logo} alt="" />
 
         <div className="flex gap-4 text-[16px]">
           <button className=" text-[#262627]">Sign In</button>
-          <button className="bg-[#e1482f] text-white px-6 py-2 rounded-sm ">
-            Login
-          </button>
+          <Link to="/login">
+            <button className="bg-[#e1482f] text-white px-6 py-2 rounded-sm">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
 

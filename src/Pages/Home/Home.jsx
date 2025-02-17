@@ -12,6 +12,7 @@ import ActivityBlog from "./Sections/ActivityBlog";
 import Footer from "../../Components/Footer";
 import banner from "/icons/footerBanner.png";
 import SchoolPackage from "./Sections/SchoolPackage";
+import Gallery from "./Sections/Gallery";
 // import AddToCart from "../../AddToCard";
 
 function Home() {
@@ -27,6 +28,7 @@ function Home() {
       <MainCategory />
       <SelectedMat />
       <DrawingCraft />
+      <Gallery />
       <ActivityBlog />
 
       {/* <AddToCart /> */}
