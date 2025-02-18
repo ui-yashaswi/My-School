@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoStarSharp } from "react-icons/io5";
+// import { IoStarSharp } from "react-icons/io5";
 
 const main = "/AddToCart/main.png";
 const image = "/AddToCart/image.png";
@@ -7,8 +7,11 @@ import { BiSolidPencil } from "react-icons/bi";
 import { MdOutlinePayment } from "react-icons/md";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FaRegCircleCheck } from "react-icons/fa6";
-
+import { useDispatch, useSelector } from "react-redux";
+import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
 const AddToCard_pay = () => {
+  const { itemscount } = useSelector((slice) => slice.cart);
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(0);
   const [payment, setPayment] = useState(true);
 
@@ -113,16 +116,16 @@ const AddToCard_pay = () => {
               <div className="border w-32 rounded-md flex justify-evenly">
                 <button
                   className="border-r size-8 text-xl"
-                  onClick={() => setQuantity(Math.max(0, quantity - 1))}
+                  onClick={() => dispatch(decrementCount())}
                 >
                   -
                 </button>
                 <span className="border-r w-16 flex items-center justify-center">
-                  {quantity}
+                  {itemscount}
                 </span>
                 <button
                   className="size-8 text-xl"
-                  onClick={() => setQuantity(quantity + 1)}
+                  onClick={() => dispatch(incrementCount())}
                 >
                   +
                 </button>

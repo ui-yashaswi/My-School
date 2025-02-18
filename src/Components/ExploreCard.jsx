@@ -14,7 +14,7 @@ function ExploreCard({ img, text }) {
 
       <div className="absolute bottom-4 left-6 flex flex-col gap-5 text-white">
         <p className="text-4xl">{text}</p>
-        <button className="bg-white w-34 rounded-sm text-xl py-2 text-zinc-700">
+        <button className="bg-white w-34 cursor-pointer hover:bg-zinc-600 hover:text-white duration-600 rounded-sm text-xl py-2 text-zinc-700">
           Explore
         </button>
       </div>

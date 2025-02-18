@@ -4,31 +4,89 @@ import NavLg from "../../Components/NavLg";
 import { MdOutlineModeEdit } from "react-icons/md";
 import img1 from "/others/Product-1.png";
 import PaymentDropdown from "../../Components/Products/PaymentDropdown";
+import TotalPrice from "../../Components/Products/TotalPrice";
+import Footer from "../../Components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
 
 function Logindetails() {
   const [count, setCount] = useState(0);
+  const [username, setUsername] = useState("Enter User name");
+  const [contact, setContact] = useState("Contact Number");
+  const [address, setAddress] = useState("Please enter Your address");
+  const [editAddress, setEditAddress] = useState(false);
+  const { itemscount } = useSelector((slice) => slice.cart);
+  const dispatch = useDispatch();
+  const [editLoginDetail, setEditLoginDetail] = useState(false);
+
   return (
     <div className="">
-      <NavLg />
+      <NavLg login={true} />
       <div className="w-full h-full flex justify-between bg-[#f5f5f5] px-44 mt-36 gap-10 ">
         {/* _________________left_____________ */}
         <div className="flex h-full w-[50vw] flex-col  my-18 gap-4">
           <div className="flex flex-col bg-white gap-2  p-2 rounded-sm ">
             <div className="flex items-center text-zinc-700 text-lg gap-4 ">
               <h1 className="font-semibold">Login Details</h1>
-              <MdOutlineModeEdit className="text-xl" />
+
+              <MdOutlineModeEdit
+                className="text-xl cursor-pointer"
+                onClick={() => setEditLoginDetail(true)}
+              />
             </div>
 
-            <h1 className="text-lg text-zinc-600">Enter User name</h1>
-            <h1 className="text-lg text-zinc-400">Contact Number</h1>
+            <input
+              className="text-lg text-zinc-600"
+              value={username}
+              disabled={!editLoginDetail}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="text-lg text-zinc-600"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+              disabled={!editLoginDetail}
+            />
+
+            {editLoginDetail && (
+              <button
+                className={`px-6 max-w-40 py-2 ${
+                  contact && username ? "bg-red-600" : "bg-red-300"
+                } cursor-pointer rounded-md text-white`}
+                disabled={!username || !contact}
+                onClick={() => setEditLoginDetail(false)}
+              >
+                save
+              </button>
+            )}
           </div>
           <div className="flex flex-col bg-white gap-2  p-2 rounded-sm ">
             <div className="flex items-center text-lg gap-4 ">
               <h1 className="font-semibold ">Delivery Address</h1>
-              <MdOutlineModeEdit className="text-xl" />
+              <MdOutlineModeEdit
+                className="text-xl"
+                onClick={() => setEditAddress(true)}
+              />
             </div>
 
-            <h1 className=" text-zinc-600">Please enter Your address</h1>
+            <input
+              className=" text-zinc-600"
+              value={address}
+              disabled={!editAddress}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+
+            {editAddress && (
+              <button
+                className={`px-6 max-w-40 py-2 ${
+                  address ? "bg-red-600" : "bg-red-300"
+                } cursor-pointer rounded-md text-white`}
+                disabled={!address}
+                onClick={() => setEditAddress(false)}
+              >
+                save address
+              </button>
+            )}
           </div>
 
           <PaymentDropdown />
@@ -53,27 +111,34 @@ function Logindetails() {
 
               <div className="w-54 h-14 bg-zinc-100 flex items-center justify-evenly border border-zinc-300 rounded-lg">
                 <button
-                  onClick={() => setCount((prev) => Math.max(0, prev - 1))}
                   className="text-xl font-bold w-10 h-10 flex items-center justify-center  bg-white hover:bg-gray-200"
+                  onClick={() => dispatch(decrementCount())}
                 >
                   -
                 </button>
 
                 <h1 className="text-lg  font-semibold w-10 text-center">
-                  {count}
+                  {itemscount}
                 </h1>
 
                 <button
                   onClick={() => setCount((prev) => prev + 1)}
                   className="text-xl font-bold w-10 h-10 flex items-center justify-center  border-zinc-400  bg-white hover:bg-gray-200"
+                  onClick={() => dispatch(incrementCount())}
                 >
                   +
                 </button>
               </div>
             </div>
           </div>
+
+          {/* Price-Details */}
+
+          <TotalPrice />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

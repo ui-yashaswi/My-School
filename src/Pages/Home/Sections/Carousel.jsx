@@ -51,12 +51,12 @@ function Carousel() {
 
             <div className=" w-full flex gap-6 mt-3">
               <Link to="/details">
-                <button className="bg-white hover:cursor-pointer text-zinc-900 text-lg w-48 rounded-sm py-3">
+                <button className="bg-white hover:cursor-pointer hover:bg-transparent hover:border-white hover:border-2 hover:text-white text-zinc-900 text-lg w-48 rounded-sm py-3">
                   Shop Now
                 </button>
               </Link>
               <div>
-                <button className="bg-transparent text-white hover:cursor-pointer text-lg w-48 py-3 border-white border-2 rounded-sm">
+                <button className="bg-transparent text-white hover:border-none hover:bg-white hover:text-zinc-700 hover:cursor-pointer text-lg w-48 py-3 border-white border-2 rounded-sm">
                   Explore More
                 </button>
               </div>

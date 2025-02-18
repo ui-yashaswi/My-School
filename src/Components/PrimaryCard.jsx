@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function PrimaryCard({ image, text }) {
   return (
@@ -13,9 +14,11 @@ function PrimaryCard({ image, text }) {
       </div>
 
       {/* Text Section */}
-      <div className="bg-zinc-800 py-3">
-        <p className="text-center text-white text-lg">{text}</p>
-      </div>
+      <Link to={"/details"}>
+        <div className="bg-zinc-800 py-3 hover:bg-zinc-700 cursor-pointer">
+          <p className="text-center text-white text-lg">{text}</p>
+        </div>
+      </Link>
     </div>
   );
 }

@@ -11,12 +11,12 @@ function Login() {
         </h1>
         <input
           type="text"
-          placeholder="+91 9701222010"
+          placeholder="Enter Your Number or Email"
           className="text-zinc-500 px-4 border py-3 border-zinc-400 rounded-sm w-full"
         />
 
         <Link to="/enterotp">
-          <button className="bg-[#f6c8c1] w-[26vw] text-white text-center py-3 rounded-sm">
+          <button className="bg-[#f6c8c1] w-[26vw] text-white text-center text-lg hover:bg-red-700 cursor-pointer py-3 rounded-sm">
             Request OTP
           </button>
         </Link>

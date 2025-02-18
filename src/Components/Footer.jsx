@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className="w-full h-full ">
       {/* _________________footer________________________ */}
-      <div className="w-full h-full  bg-[#1e1d1d] px-4 lg:px-20">
+      <div className="w-full h-full  bg-[#1e1d1d] px-4 lg:px-28">
         <div className="w-full h-full justify-between items-center lg:flex-row flex-col  flex py-10 ">
           <img
             className=" lg:h-9 lg:px-0 px-24 lg:pb-0 pb-10 bg-pik-400  bg-center object-cover"

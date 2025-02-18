@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 function Details() {
   return (
     <div>
-      <NavLg />
-      <div className="flex w-full h-full mt-40 py-20 lg:px-28 gap-18 justify-between">
+      <NavLg login={true} />
+      <div className="flex w-full h-full mt-28 py-20 lg:px-28 gap-18 justify-between">
         {/* Product Image */}
         <div className="w-[65vw] bg-rd-200 h-[70vh] border border-zinc-200 rounded-lg shadow-lg">
           <img src={img1} alt="Product" className="w-[75vw] " />
@@ -19,11 +19,11 @@ function Details() {
         <div className="flex w-full flex-col bg-pnk-400 ">
           <QuantityCard />
 
-          <button className="w-[33vw] text-center py-2 text-lg rounded-md mt-3 font-semibold text-zinc-700 border border-zinc-500">
+          <button className="w-[33vw] text-center cursor-pointer py-2 text-lg rounded-md mt-3 font-semibold text-zinc-700 border border-zinc-500">
             ADD TO CART
           </button>
-          <Link to="/logindetails">
-            <button className="w-[33vw] text-center py-2 text-lg rounded-md mt-3 font-semibold text-white bg-red-500">
+          <Link to="/cartdetails">
+            <button className="w-[33vw] cursor-pointer text-center py-2 text-lg rounded-md mt-3 font-semibold text-white bg-red-500">
               BUY NOW
             </button>
           </Link>

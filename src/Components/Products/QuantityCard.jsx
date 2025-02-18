@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { IoIosStar } from "react-icons/io";
+import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function QuantityCard() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+  const { itemscount } = useSelector((slice) => slice.cart);
+  const dispatch = useDispatch();
   return (
     <div className="w-[50vw] h-full flex flex-col gap-3">
       <h1 className="text-4xl">Wall Teach Alphabet Kit</h1>
@@ -24,16 +28,18 @@ function QuantityCard() {
 
       <div className="w-54 h-14 bg-zinc-100 flex items-center justify-evenly border border-zinc-300 rounded-lg">
         <button
-          onClick={() => setCount((prev) => Math.max(0, prev - 1))}
+          onClick={() => dispatch(decrementCount())}
           className="text-xl font-bold w-10 h-10 flex items-center justify-center  bg-white hover:bg-gray-200"
         >
           -
         </button>
 
-        <h1 className="text-lg  font-semibold w-10 text-center">{count}</h1>
+        <h1 className="text-lg  font-semibold w-10 text-center">
+          {itemscount}
+        </h1>
 
         <button
-          onClick={() => setCount((prev) => prev + 1)}
+          onClick={() => dispatch(incrementCount())}
           className="text-xl font-bold w-10 h-10 flex items-center justify-center  border-zinc-400  bg-white hover:bg-gray-200"
         >
           +
