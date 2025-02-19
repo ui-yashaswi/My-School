@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import { BsCreditCard } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function PaymentDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPayment, setSelectedPayment] = useState("");
 
-  const paymentOptions = ["Credit Card", "Debit Card", "PayPal", "UPI"];
+  const paymentOptions = ["UPI Payments", "Debit Card", "PayPal", "UPI"];
 
   return (
-    <div className="relative w-[38vw] ">
+    <div className="relative lg:w-[38vw] ">
       {/* Dropdown Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left px-4 py-4  bg-white  font-semibold text-lg rounded-sm flex items-center justify-between"
       >
         {/* Icon + Text */}
+
         <span className="flex items-center gap-3">
           <BsCreditCard className="text-gray-600" />
           {selectedPayment ? selectedPayment : "  Payment Method"}
         </span>
+        {/* </Link> */}
 
         <span className="text-gray-600">{isOpen ? "▲" : "▼"}</span>
       </button>
@@ -42,7 +45,7 @@ function PaymentDropdown() {
                 }}
                 className="cursor-pointer "
               />
-              {option}
+              <Link to={"https://www.phonepe.com/"}>{option}</Link>
             </label>
           ))}
         </div>

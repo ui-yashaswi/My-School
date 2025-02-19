@@ -35,7 +35,7 @@ function Carousel() {
       pagination={{ clickable: true }}
       navigation={true}
       modules={[Pagination, Navigation]}
-      className="mySwiper mt-38 "
+      className="mySwiper mt-20 lg:mt-38 "
     >
       {sliderContent.map(({ image, headline }, index) => (
         <SwiperSlide key={index}>
@@ -46,17 +46,17 @@ function Carousel() {
           />
 
           <div className=" absolute bottom-0 left-0 opacity-30   h-40 w-full bg-zinc-800"></div>
-          <div className=" absolute bottom-10 left-6 h-28 w-full flex flex-col gap-5 text-white text-5xl bg-amber-0">
+          <div className=" absolute bottom-10 left-1 lg:left-6 h-28 w-full flex flex-col lg:gap-5 gap-2 text-white text-3xl lg:text-5xl bg-amber-0">
             {headline}
 
-            <div className=" w-full flex gap-6 mt-3">
+            <div className=" w-full flex gap-2 lg:gap-6 mt-3">
               <Link to="/details">
-                <button className="bg-white hover:cursor-pointer hover:bg-transparent hover:border-white hover:border-2 hover:text-white text-zinc-900 text-lg w-48 rounded-sm py-3">
+                <button className="bg-white hover:cursor-pointer hover:bg-transparent hover:border-white hover:border-2 hover:text-white text-zinc-900 text-lg w-40 lg:w-48 rounded-sm py-3">
                   Shop Now
                 </button>
               </Link>
               <div>
-                <button className="bg-transparent text-white hover:border-none hover:bg-white hover:text-zinc-700 hover:cursor-pointer text-lg w-48 py-3 border-white border-2 rounded-sm">
+                <button className="bg-transparent text-white hover:border-none hover:bg-white hover:text-zinc-700 hover:cursor-pointer text-lg w-40 lg:w-48 py-3 border-white border-2 rounded-sm">
                   Explore More
                 </button>
               </div>

@@ -10,20 +10,20 @@ function Details() {
   return (
     <div>
       <NavLg login={true} />
-      <div className="flex w-full h-full mt-28 py-20 lg:px-28 gap-18 justify-between">
+      <div className="flex lg:flex-row flex-col w-full h-full mt-28 py-20 lg:px-28 px-4 gap-18 justify-between">
         {/* Product Image */}
-        <div className="w-[65vw] bg-rd-200 h-[70vh] border border-zinc-200 rounded-lg shadow-lg">
+        <div className="lg:w-[65vw] bg-rd-200 h-[70vh] border border-zinc-200 rounded-lg shadow-lg">
           <img src={img1} alt="Product" className="w-[75vw] " />
         </div>
 
         <div className="flex w-full flex-col bg-pnk-400 ">
           <QuantityCard />
 
-          <button className="w-[33vw] text-center cursor-pointer py-2 text-lg rounded-md mt-3 font-semibold text-zinc-700 border border-zinc-500">
+          <button className="lg:w-[33vw] text-center cursor-pointer py-2 text-lg rounded-md mt-3 font-semibold text-zinc-700 border border-zinc-500">
             ADD TO CART
           </button>
           <Link to="/cartdetails">
-            <button className="w-[33vw] cursor-pointer text-center py-2 text-lg rounded-md mt-3 font-semibold text-white bg-red-500">
+            <button className="lg:w-[33vw] w-full cursor-pointer hover:red-600 text-center py-2 text-lg rounded-md mt-3 font-semibold text-white bg-red-500">
               BUY NOW
             </button>
           </Link>

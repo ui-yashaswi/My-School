@@ -4,7 +4,7 @@ import { IoIosStar } from "react-icons/io";
 
 function Reviews() {
   return (
-    <div className="w-[35vw] py-2 h-full flex flex-col border-2 mt-4 rounded-xl border-zinc-100 p-3">
+    <div className="lg:w-[35vw] py-2 h-full flex flex-col border-2 mt-4 rounded-xl border-zinc-100 p-3">
       <div className="flex gap-2 items-center  ">
         <img
           src={imgcs1}

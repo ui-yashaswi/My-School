@@ -6,10 +6,10 @@ import SearchProducts from "./Pages/Products/SearchProducts";
 import Details from "./Pages/Products/Details";
 import Login from "./Pages/LogIn/Login";
 import EnterOtp from "./Pages/LogIn/EnterOtp";
-import Logindetails from "./Pages/Products/Logindetails";
+import Cartdetails from "./Pages/Products/Cartdetails";
 import AllProducts from "./Pages/Products/AllProducts";
-import AddToCard_pay from "./Pages/Products/AddToCartPay";
 import Profile from "./Pages/Profile/Profile";
+import CreateAc from "./Pages/SignIn/CreateAc";
 
 // import NotFound from "./pages/NotFound/NotFound";
 
@@ -45,7 +45,11 @@ function App() {
     },
     {
       path: "/cartdetails",
-      element: <Logindetails />,
+      element: <Cartdetails />,
+    },
+    {
+      path: "/creataccount",
+      element: <CreateAc />,
     },
 
     {

@@ -29,7 +29,7 @@ function QuantityCard() {
       <div className="w-54 h-14 bg-zinc-100 flex items-center justify-evenly border border-zinc-300 rounded-lg">
         <button
           onClick={() => dispatch(decrementCount())}
-          className="text-xl font-bold w-10 h-10 flex items-center justify-center  bg-white hover:bg-gray-200"
+          className="text-xl font-bold w-10 h-14 flex items-center justify-center border-r pr-5 border-zinc-300 cursor-pointer"
         >
           -
         </button>
@@ -40,7 +40,7 @@ function QuantityCard() {
 
         <button
           onClick={() => dispatch(incrementCount())}
-          className="text-xl font-bold w-10 h-10 flex items-center justify-center  border-zinc-400  bg-white hover:bg-gray-200"
+          className="text-xl font-bold w-10 h-14 flex items-center justify-center border-l pl-5 border-zinc-200   cursor-pointer "
         >
           +
         </button>

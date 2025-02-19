@@ -4,7 +4,7 @@ function Description() {
   return (
     <div className="flex w-full h-full py-10  flex-col gap-6">
       {/* Product Description */}
-      <div className="w-[40vw]">
+      <div className="lg:w-[40vw]">
         <h1 className="text-xl font-semibold">Product Description</h1>
         <p className="text-zinc-600 text-lg pt-4">
           These Alphabet Train Learning Sticks make learning letters and words
