@@ -10,6 +10,8 @@ import Cartdetails from "./Pages/Products/Cartdetails";
 import AllProducts from "./Pages/Products/AllProducts";
 import Profile from "./Pages/Profile/Profile";
 import CreateAc from "./Pages/SignIn/CreateAc";
+import DecorServ from "./Pages/HomeNav.jsx/DecorServ";
+import SmartWall from "./Pages/HomeNav.jsx/SmartWall";
 
 // import NotFound from "./pages/NotFound/NotFound";
 
@@ -55,6 +57,14 @@ function App() {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/services/decoration",
+      element: <DecorServ/>
+    },
+    {
+      path: "/services/smartwall",
+      element: <SmartWall/>
     },
     // {
     //   path: "*",

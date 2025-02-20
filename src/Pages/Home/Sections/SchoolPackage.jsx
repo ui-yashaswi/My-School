@@ -18,7 +18,7 @@ function SchoolPackage() {
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
         School Packages
       </h1>
-      <div className="flex flex-wrap justify-between gap-6 py-4">
+      <div className="flex lg:flex-row flex-col  justify-between gap-6 py-4">
         {cards.map((item, index) => (
           <ExploreCard key={index} img={item.img} text={item.text} />
         ))}

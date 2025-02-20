@@ -31,7 +31,7 @@ function TotalPrice() {
         <div className="mt-4 flex flex-col gap-2">
           <h1 className="text-lg flex items-center gap-3 font-semibold text-zinc-700">
             Secure Checkout{" "}
-            <span className="text-green-500 text-lg border-2 border-green-500  rounded-full">
+            <span className="text-green-500 text-[15px] border-2 border-green-500  rounded-full">
               <MdDone />
             </span>
           </h1>

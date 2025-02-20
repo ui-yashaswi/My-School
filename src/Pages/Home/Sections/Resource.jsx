@@ -19,7 +19,7 @@ function Resource() {
   return (
     <div className="lg:px-28 px-4 ">
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
-        Artist & Painters
+        Resource Pack
       </h1>
 
       {/* ✅ Flex wrap with 5 images per row */}

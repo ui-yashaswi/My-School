@@ -3,7 +3,7 @@ import React from "react";
 function ExploreCard({ img, text }) {
   // Change "image" to "img"
   return (
-    <div className="relative lg:w-[41vw] w-[90vw] h-[35vh] rounded-lg">
+    <div className="relative lg:w-[41vw] md:w-[41vw] w-[90vw] h-[35vh] rounded-lg">
       <img
         src={img} // Here also, change "image" to "img"
         alt={text}

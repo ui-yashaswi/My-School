@@ -16,7 +16,7 @@ function NavLg({ login }) {
           <img className=" h-9 bg-center object-cover" src={logo} alt="" />
         </Link>
         {!login ? (
-          <div className="flex gap-4 text-[16px]">
+          <div className="flex gap-4  items-center text-[16px]">
             <Link to={"/creataccount"}>
               <button className=" text-[#262627]">Sign up</button>
             </Link>
@@ -36,7 +36,7 @@ function NavLg({ login }) {
               <FaRegUserCircle />
             </Link>
             <Link to={"/cartdetails"} className="relative">
-              <div className="bg-red-600 absolute text-white text-xs flex bottom-0  w-4 h-4 pl-1 rounded-full items-center">
+              <div className="bg-red-600 absolute text-white text-xs flex top-0 left-5 w-4 h-4 pl-1 rounded-full items-center">
                 {itemscount}
               </div>
               <MdOutlineShoppingCart />
@@ -46,12 +46,34 @@ function NavLg({ login }) {
       </div>
 
       <div className="lg:flex hidden justify-center items-center h-17 text-[16px] border-t  border-zinc-100  text-[#262627] gap-8 shadow-md shadow-zinc-100">
-        <p className=" hover:text-red-500 cursor-pointer">Decoration Service</p>
-        <p className=" hover:text-red-500 cursor-pointer">Smart Wall</p>
-        <p className=" hover:text-red-500 cursor-pointer">Hobby Box</p>
+        <Link to={"/services/decoration"}>
+          <p className=" hover:text-red-500 cursor-pointer">
+            Decoration Service
+          </p>
+        </Link>
+
+        <Link to={"/services/smartwall"}>
+          <p className=" hover:text-red-500 cursor-pointer">Smart Wall</p>
+        </Link>
+
+        <Link to={"/services/smartwall"}>
+          <p className=" hover:text-red-500 cursor-pointer">Hobby Box</p>
+        </Link>
+
+        <Link  to={"/services/smartwall"}>
         <p className=" hover:text-red-500 cursor-pointer">Skill Hub</p>
+        </Link>
+
+        <Link  to={"/services/smartwall"}>
         <p className=" hover:text-red-500 cursor-pointer">Game On The Wall</p>
+        </Link>
+
+        <Link  to={"/services/smartwall"}>
         <p className=" hover:text-red-500 cursor-pointer">Prime Pack</p>
+        </Link>
+        
+        
+        
         <Link to="/allproducts">
           <p className=" hover:text-red-500 cursor-pointer">Products</p>
         </Link>

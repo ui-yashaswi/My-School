@@ -12,7 +12,7 @@ function DrawingCraft() {
   return (
     <div className="lg:px-28 px-4">
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
-        Drawing & cart
+        Drawing & Craft
       </h1>
       <div className="flex flex-wrap justify-between gap-6 py-4">
         {cards.map((item, index) => (

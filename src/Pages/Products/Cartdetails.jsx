@@ -11,9 +11,9 @@ import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
 
 function Cartdetails() {
   const [count, setCount] = useState(0);
-  const [username, setUsername] = useState("Enter User name");
-  const [contact, setContact] = useState("Contact Number");
-  const [address, setAddress] = useState("Please enter Your address");
+  const [username, setUsername] = useState("");
+  const [contact, setContact] = useState("");
+  const [address, setAddress] = useState("");
   const [editAddress, setEditAddress] = useState(false);
   const { itemscount } = useSelector((slice) => slice.cart);
   const dispatch = useDispatch();
@@ -38,12 +38,14 @@ function Cartdetails() {
             <input
               className="text-lg text-zinc-600"
               value={username}
+              placeholder="Enter User name"
               disabled={!editLoginDetail}
               onChange={(e) => setUsername(e.target.value)}
             />
             <input
               className="text-lg text-zinc-600"
               value={contact}
+              placeholder="Contact Number"
               onChange={(e) => setContact(e.target.value)}
               disabled={!editLoginDetail}
             />
@@ -72,6 +74,7 @@ function Cartdetails() {
             <input
               className=" text-zinc-600"
               value={address}
+              placeholder="Please enter Your address"
               disabled={!editAddress}
               onChange={(e) => setAddress(e.target.value)}
             />

@@ -25,7 +25,7 @@ function MainCategory() {
   return (
     <div>
       <h1 className="text-3xl text-center my-10 font-semibold text-zinc-800">
-        Artist & Painters
+        Main Categories
       </h1>
       <div className="flex gap-6 flex-wrap justify-center lg:px-20">
         {cardsData.map((item, index) => (
