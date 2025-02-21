@@ -12,6 +12,7 @@ import img8 from "/DecorServ/ds-4.png";
 import NavLg from "../../Components/NavLg";
 import Footer from "../../Components/Footer";
 import banner from "/icons/footerBanner.png";
+import { useLocation } from "react-router-dom";
 
 const cardsData = [
   { image: img1, text: "Wall Brand Decoration" },
@@ -28,9 +29,8 @@ function DecorServ() {
   return (
     <div>
       <NavLg />
-      <h1 className="text-3xl text-center my-20 font-semibold text-zinc-800">
+      <h1 className="text-3xl text-center lg:mt-48 mt-20 my-20 font-semibold text-zinc-800">
         Decoration Services
-
       </h1>
       <div className="flex gap-6 flex-wrap justify-center lg:px-20">
         {cardsData.map((item, index) => (

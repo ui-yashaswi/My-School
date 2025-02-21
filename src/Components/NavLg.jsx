@@ -1,12 +1,14 @@
 import React from "react";
 import logo from "/icons/ST-logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useSelector } from "react-redux";
 
 function NavLg({ login }) {
+  const { pathname } = useLocation();
+
   const { itemscount } = useSelector((slice) => slice.cart);
 
   return (
@@ -36,9 +38,11 @@ function NavLg({ login }) {
               <FaRegUserCircle />
             </Link>
             <Link to={"/cartdetails"} className="relative">
-              <div className="bg-red-600 absolute text-white text-xs flex top-0 left-5 w-4 h-4 pl-1 rounded-full items-center">
-                {itemscount}
-              </div>
+              {itemscount > 0 && (
+                <div className="bg-red-600 absolute text-white text-xs flex top-0 left-5 w-4 h-4 pl-1 rounded-full items-center">
+                  {itemscount}
+                </div>
+              )}
               <MdOutlineShoppingCart />
             </Link>
           </div>
@@ -47,33 +51,50 @@ function NavLg({ login }) {
 
       <div className="lg:flex hidden justify-center items-center h-17 text-[16px] border-t  border-zinc-100  text-[#262627] gap-8 shadow-md shadow-zinc-100">
         <Link to={"/services/decoration"}>
-          <p className=" hover:text-red-500 cursor-pointer">
+          <p
+            className={` ${
+              pathname.includes("decoration")
+                ? " text-red-500 font-semibold "
+                : " "
+            } hover:text-red-500 cursor-pointer`}
+          >
             Decoration Service
           </p>
         </Link>
 
         <Link to={"/services/smartwall"}>
-          <p className=" hover:text-red-500 cursor-pointer">Smart Wall</p>
+          <p
+          className={` ${
+            pathname.includes("smartwall")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}
+            
+            >
+            Smart Wall
+          </p>
         </Link>
 
         <Link to={"/services/smartwall"}>
-          <p className=" hover:text-red-500 cursor-pointer">Hobby Box</p>
+          <p className={` ${
+            pathname.includes("smartwall")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}>Hobby Box</p>
         </Link>
 
-        <Link  to={"/services/smartwall"}>
-        <p className=" hover:text-red-500 cursor-pointer">Skill Hub</p>
+        <Link to={"/services/smartwall"}>
+          <p className=" hover:text-red-500 cursor-pointer">Skill Hub</p>
         </Link>
 
-        <Link  to={"/services/smartwall"}>
-        <p className=" hover:text-red-500 cursor-pointer">Game On The Wall</p>
+        <Link to={"/services/smartwall"}>
+          <p className=" hover:text-red-500 cursor-pointer">Game On The Wall</p>
         </Link>
 
-        <Link  to={"/services/smartwall"}>
-        <p className=" hover:text-red-500 cursor-pointer">Prime Pack</p>
+        <Link to={"/services/smartwall"}>
+          <p className=" hover:text-red-500 cursor-pointer">Prime Pack</p>
         </Link>
-        
-        
-        
+
         <Link to="/allproducts">
           <p className=" hover:text-red-500 cursor-pointer">Products</p>
         </Link>

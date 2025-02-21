@@ -47,7 +47,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     cart: [],
-    itemscount: 1,
+    itemscount: 0,
     loading: false,
     errorMessage: null,
     successMessage: null,
@@ -59,6 +59,9 @@ const cartSlice = createSlice({
     decrementCount: (state) => {
       state.itemscount =
         state.itemscount < 1 ? state.itemscount : state.itemscount - 1;
+    },
+    incrementCountByPayload: (state, { payload }) => {
+      state.itemscount = state.itemscount + payload.count;
     },
   },
   extraReducers: (builder) => {
@@ -111,5 +114,6 @@ const cartSlice = createSlice({
       });
   },
 });
-export const { incrementCount, decrementCount } = cartSlice.actions;
+export const { incrementCount, decrementCount, incrementCountByPayload } =
+  cartSlice.actions;
 export default cartSlice.reducer;

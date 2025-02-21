@@ -2,13 +2,13 @@ import React from "react";
 
 function Description() {
   return (
-    <div className="flex w-full h-full py-10  flex-col gap-6">
+    <div className="flex lg:w-full h-full py-10  flex-col gap-6">
       {/* Product Description */}
-      <div className="lg:w-[40vw]">
+      <div className="lg:w-[33vw]">
         <h1 className="text-xl font-semibold">Product Description</h1>
         <p className="text-zinc-600 text-lg pt-4">
-          These Alphabet Train Learning Sticks make learning letters and words
-          fun for kids. Designed like train carriages, each stick features a
+          These Alphabet Traid n Learning Sticks make learning letters and words
+          fun for kids. Designelike train carriages, each stick features a
           letter, helping children recognize alphabets and boost cognitive
           skills.
         </p>

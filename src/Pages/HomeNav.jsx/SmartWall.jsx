@@ -28,7 +28,7 @@ function SmartWall() {
   return (
     <div>
       <NavLg />
-      <h1 className="text-3xl  text-center my-20 font-semibold text-zinc-800">
+      <h1 className="text-3xl  text-center my-20 lg:mt-48 mt-20 font-semibold text-zinc-800">
        Smart Walls
         
       </h1>

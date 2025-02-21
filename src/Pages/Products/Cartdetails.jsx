@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
 
 function Cartdetails() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [username, setUsername] = useState("");
   const [contact, setContact] = useState("");
   const [address, setAddress] = useState("");
@@ -114,18 +114,20 @@ function Cartdetails() {
 
               <div className="w-54 h-14 bg-zinc-100 flex items-center justify-evenly border border-zinc-300 rounded-lg">
                 <button
-                  onClick={() => dispatch(decrementCount())}
+                  onClick={() => {
+                    count > 1 && setCount((prev) => prev - 1);
+                  }}
                   className="text-xl font-bold w-10 h-14 flex items-center justify-center border-r pr-5 border-zinc-300 cursor-pointer"
                 >
                   -
                 </button>
 
                 <h1 className="text-lg  font-semibold w-10 text-center">
-                  {itemscount}
+                  {count}
                 </h1>
 
                 <button
-                  onClick={() => dispatch(incrementCount())}
+                  onClick={() => setCount((prev) => prev + 1)}
                   className="text-xl font-bold w-10 h-14 flex items-center justify-center border-l pl-5 border-zinc-200   cursor-pointer "
                 >
                   +
