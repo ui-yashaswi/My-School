@@ -2,11 +2,11 @@ import React from 'react'
 import PrimaryCard from "../../Components/PrimaryCard";
 
 import img1 from "/smartWall/sw-1.jpeg";
-import img2 from "/smartWall/sw-2.jpeg";
+import img2 from "/smartWall/sw-2.png";
 import img3 from "/smartWall/sw-3.png";
 import img4 from "/smartWall/sw-4.png";
 import img5 from "/smartWall/sw-1.jpeg";
-import img6 from "/smartWall/sw-2.jpeg";
+import img6 from "/smartWall/sw-2.png";
 import img7 from "/smartWall/sw-3.png";
 import img8 from "/smartWall/sw-4.png";
 import NavLg from "../../Components/NavLg";
@@ -36,11 +36,7 @@ function SmartWall() {
         {cardsData.map((item, index) => (
           <PrimaryCard key={index} image={item.image} text={item.text} />
         ))}
-        <div className=" w-full h-full flex justify-center my-3 ">
-          <button className=" border-2 text-zinc-800 font-semibold text-lg rounded-sm w-90 py-3">
-            Explore More
-          </button>
-        </div>
+        
       </div>
 
       <div className="w-full h-full bg-white py-10">

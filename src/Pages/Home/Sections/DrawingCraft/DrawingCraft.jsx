@@ -1,11 +1,11 @@
 import React from "react";
-import ExploreCard from "../../../Components/ExploreCard";
+import ExploreCard from "../../../../Components/ExploreCard";
 import img2 from "/drawingCraft/dc-1.png";
 import img1 from "/drawingCraft/dc-2.jpg";
 
 const cards = [
-  { img: img2, text: "Smart Learning" },
-  { img: img1, text: "DIY-Do It YourSelf" },
+  { img: img2, text: "Smart Learning" ,path:"/doityourself"},
+  { img: img1, text: "DIY-Do It YourSelf" ,path:"/drawingspace"},
 ];
 
 function DrawingCraft() {
@@ -16,7 +16,7 @@ function DrawingCraft() {
       </h1>
       <div className="flex flex-wrap justify-between gap-6 py-4">
         {cards.map((item, index) => (
-          <ExploreCard key={index} img={item.img} text={item.text} />
+          <ExploreCard key={index} img={item.img} text={item.text} path={item.path}/>
         ))}
       </div>
     </div>

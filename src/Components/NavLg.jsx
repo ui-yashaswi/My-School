@@ -75,28 +75,44 @@ function NavLg({ login }) {
           </p>
         </Link>
 
-        <Link to={"/services/smartwall"}>
+        <Link to={"/services/hobbybox"}>
           <p className={` ${
-            pathname.includes("smartwall")
+            pathname.includes("hobbybox")
               ? " text-red-500 font-semibold "
               : " "
           } hover:text-red-500 cursor-pointer`}>Hobby Box</p>
         </Link>
 
-        <Link to={"/services/smartwall"}>
-          <p className=" hover:text-red-500 cursor-pointer">Skill Hub</p>
+        <Link to={"/services/skillhub"}>
+          <p className={` ${
+            pathname.includes("skillhub")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}>Skill Hub</p>
         </Link>
 
-        <Link to={"/services/smartwall"}>
-          <p className=" hover:text-red-500 cursor-pointer">Game On The Wall</p>
+        <Link to={"/services/gameonwall"}>
+          <p className={` ${
+            pathname.includes("gameonwall")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}>Game On The Wall</p>
         </Link>
 
-        <Link to={"/services/smartwall"}>
-          <p className=" hover:text-red-500 cursor-pointer">Prime Pack</p>
+        <Link to={"/services/primepack"}>
+          <p className={` ${
+            pathname.includes("primepack")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}>Prime Pack</p>
         </Link>
 
         <Link to="/allproducts">
-          <p className=" hover:text-red-500 cursor-pointer">Products</p>
+          <p className={` ${
+            pathname.includes("allproducts")
+              ? " text-red-500 font-semibold "
+              : " "
+          } hover:text-red-500 cursor-pointer`}>Products</p>
         </Link>
       </div>
     </div>

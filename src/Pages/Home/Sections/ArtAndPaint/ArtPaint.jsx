@@ -1,11 +1,11 @@
 import React from "react";
-import ExploreCard from "../../../Components/ExploreCard";
+import ExploreCard from "../../../../Components/ExploreCard";
 import img1 from "/artAndPaint/ap-1.jpg";
 import img2 from "/artAndPaint/ap-2.jpg";
 
 const cards = [
-  { img: img1, text: "DIY Do It Yourself" },
-  { img: img2, text: "Drawing Spacec" },
+  { img: img1, text: "Artist at Your Service", path:"/arts-and-paints"},
+  { img: img2, text: "Draw & Earn", path:"/draw-and-earn" },
 ];
 
 function ArtPaint() {
@@ -16,7 +16,7 @@ function ArtPaint() {
       </h1>
       <div className="flex  justify-between lg:flex-row flex-col gap-6 py-4">
         {cards.map((item, index) => (
-          <ExploreCard key={index} img={item.img} text={item.text} />
+          <ExploreCard key={index} img={item.img} text={item.text} path={item.path} />
         ))}
       </div>
     </div>

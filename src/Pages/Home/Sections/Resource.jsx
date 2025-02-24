@@ -23,11 +23,11 @@ function Resource() {
       </h1>
 
       {/* ✅ Flex wrap with 5 images per row */}
-      <div className="w-full h-full my-20  flex flex-wrap justify-center gap-4">
+      <div className="w-full h-full my-20  flex flex-wrap justify-between gap-4">
         {resources.map((item, index) => (
           <div
             key={index}
-            className="relative lg:w-[19%] w-[90vw] h-[34vh] border-zinc-100 my-2 border-2 overflow-hidden"
+            className="relative  xl:min-w-[12vw] min-w-[15vw] h-[34vh] border-zinc-100 my-2 border-2 overflow-hidden"
           >
             <img
               className="w-full h-full object-cover object-center"

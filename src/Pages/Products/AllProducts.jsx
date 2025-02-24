@@ -6,11 +6,11 @@ import Resource from "../Home/Sections/Resource";
 import CoreSub from "../Home/Sections/CoreSub";
 import MainCategory from "../Home/Sections/MainCategory";
 import SelectedMat from "../Home/Sections/SelectedMat";
-import DrawingCraft from "../Home/Sections/DrawingCraft";
+import DrawingCraft from "../Home/Sections/DrawingCraft/DrawingCraft";
 import ActivityBlog from "../Home/Sections/ActivityBlog";
 import Footer from "../../Components/Footer";
 import banner from "/icons/footerBanner.png";
-import SchoolPackage from "../Home/Sections/SchoolPackage";
+import SchoolPackage from "../Home/Sections/SchoolPackage/SchoolPackage";
 
 function AllProducts() {
   return (

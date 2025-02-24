@@ -1,9 +1,9 @@
 import React from "react";
-
-function ExploreCard({ img, text }) {
+import { Link } from "react-router-dom";
+function ExploreCard({ img, text,path }) {
   // Change "image" to "img"
   return (
-    <div className="relative lg:w-[41vw] md:w-[41vw] w-[90vw] h-[35vh] rounded-lg">
+    <div className="relative xl:w-[41vw] lg:w-[20vw]  md:w-[25vw] w-[90vw] h-[35vh] rounded-lg">
       <img
         src={img} // Here also, change "image" to "img"
         alt={text}
@@ -14,9 +14,11 @@ function ExploreCard({ img, text }) {
 
       <div className="absolute bottom-4 left-6 flex flex-col gap-5 text-white">
         <p className="text-4xl">{text}</p>
+        <Link to={path}>
         <button className="bg-white w-34 cursor-pointer hover:bg-zinc-600 hover:text-white duration-600 rounded-sm text-xl py-2 text-zinc-700">
           Explore
         </button>
+        </Link>
       </div>
     </div>
   );
