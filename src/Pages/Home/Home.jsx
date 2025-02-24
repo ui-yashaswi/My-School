@@ -8,7 +8,7 @@ import CoreSub from "./Sections/CoreSub";
 import MainCategory from "./Sections/MainCategory";
 import SelectedMat from "./Sections/SelectedMat";
 import DrawingCraft from "./Sections/DrawingCraft/DrawingCraft";
-import ActivityBlog from "./Sections/ActivityBlog";
+import ActivityBlog from "./Sections/ActivityBlog/ActivityBlog";
 import Footer from "../../Components/Footer";
 import banner from "/icons/footerBanner.png";
 import SchoolPackage from "./Sections/SchoolPackage/SchoolPackage";

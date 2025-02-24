@@ -25,6 +25,8 @@ import PrePrimary from "./Pages/Home/Sections/SchoolPackage/PrePrimary";
 import HighSchool from "./Pages/Home/Sections/SchoolPackage/HighSchool"
 import DIY from "./Pages/Home/Sections/DrawingCraft/DIY";
 import DrawingSpace from "./Pages/Home/Sections/DrawingCraft/DrawingSpace";
+import DoItYourself from "./Pages/Home/Sections/ActivityBlog/DoItYourself";
+import Origami from "./Pages/Home/Sections/ActivityBlog/Origami";
 
 // import NotFound from "./pages/NotFound/NotFound";
 
@@ -131,6 +133,14 @@ function App() {
     {
       path: "/drawingspace",
       element: <DrawingSpace/>
+    },
+    {
+      path: "/diy-doityourself",
+      element: <DoItYourself/>
+    },
+    {
+      path: "/origami",
+      element: <Origami/>
     },
     // {
     //   path: "*",
