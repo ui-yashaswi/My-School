@@ -30,9 +30,9 @@ function Footer() {
         {/* _____________________text________________ */}
 
         <div>
-          <div className="flex lg:flex-row  flex-col gap-10 py-10 w-full">
+          <div className="flex lg:flex-row  flex-col gap-18 py-10 w-full">
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 Earn Money
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -44,7 +44,7 @@ function Footer() {
               </ul>
             </div>
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 Artist & Painters
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -56,7 +56,7 @@ function Footer() {
               </ul>
             </div>
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 Student Gallery
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -67,7 +67,7 @@ function Footer() {
               </ul>
             </div>
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 My Schools
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -78,7 +78,7 @@ function Footer() {
               </ul>
             </div>
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 Hobby Box
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -89,7 +89,7 @@ function Footer() {
               </ul>
             </div>
             <div className="">
-              <h2 className="text-xl font-semibold mb-4 text-white">
+              <h2 className="text-xl text-nowrap font-semibold mb-4 text-white">
                 About us
               </h2>
               <ul className="text-gray-400 text-md space-y-1">
@@ -109,7 +109,7 @@ function Footer() {
             <p>Disclaimer</p>
           </div>
 
-          <div className="flex items-center text-xl font-semibold gap-3">
+          <div className="flex items-center text-xl text-nowrap font-semibold gap-3">
             <p className="text-white">Follow us</p>
             <img className="h-10" src={youtube} alt="" />
             <img className="h-10 bg-white rounded-lg" src={twitter} alt="" />

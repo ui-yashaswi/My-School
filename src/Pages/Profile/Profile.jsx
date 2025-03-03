@@ -6,6 +6,7 @@ import { FiLogOut } from "react-icons/fi";
 import NavLg from "../../Components/NavLg";
 import Footer from "../../Components/Footer";
 import imgFooter from "/icons/footerBanner.png";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const [editMode, setEditMode] = useState(false);
@@ -32,7 +33,7 @@ export default function Profile() {
       <NavLg login={true} />
       <div className="flex lg:flex-row flex-col w-full justify-between py-10 px-4  bg-[#f5f5f5] lg:px-28">
         {/* Sidebar */}
-        <div className="flex flex-col bg-amber-60 lg:w-[30vw] mt-20 lg:mt-38 lg:gap-[52vh]">
+        <div className="flex flex-col bg-amber-60 lg:w-[30vw] mt-20 lg:mt-38 lg:gap-[41vh]">
           <div className="gap-10  ">
             <div className="flex p-2 gap-2 items-center rounded-sm bg-white">
               <CgProfile className="text-4xl text-zinc-700" />
@@ -43,10 +44,12 @@ export default function Profile() {
                 </h1>
               </div>
             </div>
+            <Link to={"/myorders"} >
             <div className="flex p-2 gap-2 mt-4 items-center rounded-sm bg-white">
               <BsMinecart className="text-2xl text-zinc-700" />
               <h1 className="text-zinc-700 font-semibold text-lg">My Orders</h1>
             </div>
+            </Link>
           </div>
           <div className="flex w-full gap-2 items-center mt-6 rounded-sm bg-white p-2">
             <FiLogOut className="text-2xl" />
@@ -123,7 +126,7 @@ export default function Profile() {
               <input
                 type="text"
                 name="mobile"
-                className="border border-zinc-300 w-96 rounded-md my-3 p-2 w-full"
+                className="border border-zinc-300 lg:w-96 rounded-md my-3 p-2 w-full"
                 value={formData.mobile}
                 onChange={handleChange}
                 disabled={!editMode}

@@ -112,7 +112,7 @@ function NavLg({ login }) {
             pathname.includes("allproducts")
               ? " text-red-500 font-semibold "
               : " "
-          } hover:text-red-500 cursor-pointer`}>Products</p>
+          } hover:text-red-500 cursor-pointer`}>Categories</p>
         </Link>
       </div>
     </div>

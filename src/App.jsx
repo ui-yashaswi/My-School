@@ -27,6 +27,7 @@ import DIY from "./Pages/Home/Sections/DrawingCraft/DIY";
 import DrawingSpace from "./Pages/Home/Sections/DrawingCraft/DrawingSpace";
 import DoItYourself from "./Pages/Home/Sections/ActivityBlog/DoItYourself";
 import Origami from "./Pages/Home/Sections/ActivityBlog/Origami";
+import MyOrders from "./Pages/MyOrder/MyOrders";
 
 // import NotFound from "./pages/NotFound/NotFound";
 
@@ -72,6 +73,10 @@ function App() {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/myorders",
+      element: <MyOrders/>
     },
     {
       path: "/services/decoration",

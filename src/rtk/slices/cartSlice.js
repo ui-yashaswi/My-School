@@ -16,6 +16,9 @@ export const addToCart = createAsyncThunk(
     }
   }
 );
+
+
+
 export const decreaseCartItem = createAsyncThunk(
   "cart/decreaseitem",
   async (values, { rejectWithValue, fulfillWithValue }) => {

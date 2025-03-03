@@ -12,7 +12,7 @@ import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
 const AddToCard_pay = () => {
   const { itemscount } = useSelector((slice) => slice.cart);
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(0);
+  // const [quantity, setQuantity] = useState(0);
   const [payment, setPayment] = useState(true);
 
   return (
@@ -37,7 +37,8 @@ const AddToCard_pay = () => {
       {/* Hero Section */}
       <div className="flex justify-center gap-7">
         <div className="w-1/2 flex  pl-20 pt-8  gap-6 items-start justify-start flex-col ">
-          <div className="border  w-full p-2 bg-white">
+
+          {/* <div className="border  w-full p-2 bg-white">
             <h1 className="flex items-center gap-6 font-semibold text-xl py-1">
               Login Details{" "}
               <span>
@@ -48,7 +49,8 @@ const AddToCard_pay = () => {
             <h1>
               Contact: <span>7012220109</span>
             </h1>
-          </div>
+          </div> */}
+
           <div className="border  w-full p-2 bg-white">
             <h1 className="flex items-center gap-6 font-semibold text-xl py-1">
               Delivery Address
@@ -58,7 +60,7 @@ const AddToCard_pay = () => {
             </h1>
             <h1 className="w-[90%]">
               Plot No. 12, Road No. 5,KPHB Phase 3,Kukatpally,
-              Hyderabad, Telangana, 500072.
+              Hyderabad,Telangana, 500072.
             </h1>
           </div>
           <div className="w-full bg-white border p-2">

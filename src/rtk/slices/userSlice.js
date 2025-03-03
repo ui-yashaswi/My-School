@@ -29,11 +29,11 @@ export const logout = createAsyncThunk(
     }
   }
 );
-export const register = createAsyncThunk(
+export const registeruser = createAsyncThunk(
   "user/register",
   async (values, { rejectWithValue, fulfillWithValue }) => {
     try {
-      const { data } = await api.post("", {
+      const { data } = await api.post("/register", values,{
         withCredentials: true,
       });
       return fulfillWithValue(data);
@@ -122,18 +122,18 @@ const userSlice = createSlice({
         state.loading = false;
         state.errorMessage = payload.error;
       })
-      .addCase(register.pending, (state) => {
+      .addCase(registeruser.pending, (state) => {
         state.loading = true;
         state.successMessage = null;
         state.errorMessage = null;
       })
-      .addCase(register.fulfilled, (state, { payload }) => {
+      .addCase(registeruser.fulfilled, (state, { payload }) => {
         console.log(payload);
         state.loading = false;
         state.successMessage = payload.message;
         state.user = payload.data;
       })
-      .addCase(register.rejected, (state, { payload }) => {
+      .addCase(registeruser.rejected, (state, { payload }) => {
         state.loading = false;
         state.errorMessage = payload.error;
       })

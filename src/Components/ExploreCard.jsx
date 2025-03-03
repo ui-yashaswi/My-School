@@ -10,12 +10,12 @@ function ExploreCard({ img, text,path }) {
         className="w-full h-full rounded-sm object-cover"
       />
 
-      <div className="absolute bottom-0 left-0 opacity-20 h-30 w-full bg-zinc-500"></div>
+      <div className="absolute bottom-0 left-0 opacity-80 h-30 w-full bg-white"></div>
 
-      <div className="absolute bottom-4 left-6 flex flex-col gap-5 text-white">
+      <div className="absolute bottom-4 left-6 flex flex-col gap-5 text-zinc-800">
         <p className="text-4xl">{text}</p>
         <Link to={path}>
-        <button className="bg-white w-34 cursor-pointer hover:bg-zinc-600 hover:text-white duration-600 rounded-sm text-xl py-2 text-zinc-700">
+        <button className="bg-[#e24c30] w-36 cursor-pointer hover:bg-[#ff0000b0] text-white duration-200 rounded-sm text-xl py-2 ">
           Explore
         </button>
         </Link>
