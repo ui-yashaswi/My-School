@@ -22,7 +22,7 @@ import PrintGall from "./Pages/HomeNav.jsx/PrintGall";
 import PreSchool from "./Pages/Home/Sections/SchoolPackage/PreSchool";
 import PrimarySchool from "./Pages/Home/Sections/SchoolPackage/PrimarySchool";
 import PrePrimary from "./Pages/Home/Sections/SchoolPackage/PrePrimary";
-import HighSchool from "./Pages/Home/Sections/SchoolPackage/HighSchool"
+import HighSchool from "./Pages/Home/Sections/SchoolPackage/HighSchool";
 import DIY from "./Pages/Home/Sections/DrawingCraft/DIY";
 import DrawingSpace from "./Pages/Home/Sections/DrawingCraft/DrawingSpace";
 import DoItYourself from "./Pages/Home/Sections/ActivityBlog/DoItYourself";
@@ -76,7 +76,7 @@ function App() {
     },
     {
       path: "/myorders",
-      element: <MyOrders/>
+      element: <MyOrders />,
     },
     {
       path: "/services/decoration",
@@ -88,64 +88,64 @@ function App() {
     },
     {
       path: "/services/skillhub",
-      element: <SkillHub/>,
+      element: <SkillHub />,
     },
     {
       path: "/services/hobbybox",
-      element: <HobbyBox/>,
+      element: <HobbyBox />,
     },
     {
       path: "/services/gameonwall",
-      element: <GameOnWall/>,
+      element: <GameOnWall />,
     },
     {
       path: "/services/primepack",
-      element: <PrimePack/>,
+      element: <PrimePack />,
     },
     {
       path: "/services/printgallery",
-      element: <PrintGall/>
+      element: <PrintGall />,
     },
 
     {
       path: "/arts-and-paints",
-      element: <YourServices/>,
+      element: <YourServices />,
     },
     {
       path: "/draw-and-earn",
-      element: <DrawAndEarn/>
+      element: <DrawAndEarn />,
     },
     {
       path: "/preschool",
-      element: <PreSchool/>
+      element: <PreSchool />,
     },
     {
       path: "/primaryschool",
-      element: <PrimarySchool/>
+      element: <PrimarySchool />,
     },
     {
       path: "/preprimaryschool",
-      element: <PrePrimary/>
+      element: <PrePrimary />,
     },
     {
       path: "/highschool",
-      element: <HighSchool/>
+      element: <HighSchool />,
     },
     {
       path: "/doityourself",
-      element: <DIY/>
+      element: <DIY />,
     },
     {
       path: "/drawingspace",
-      element: <DrawingSpace/>
+      element: <DrawingSpace />,
     },
     {
       path: "/diy-doityourself",
-      element: <DoItYourself/>
+      element: <DoItYourself />,
     },
     {
       path: "/origami",
-      element: <Origami/>
+      element: <Origami />,
     },
     // {
     //   path: "*",
