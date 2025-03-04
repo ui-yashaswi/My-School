@@ -12,7 +12,7 @@ function CreateAc() {
   const formik = useFormik({
     initialValues: {
       fullName: "",
-      emailOrContact: "",
+      email: "",
       contactNumber: "",
       password: "",
     },
@@ -20,11 +20,11 @@ function CreateAc() {
       fullName: Yup.string()
         .min(3, "Full Name must be at least 3 characters")
         .required("Full Name is required"),
-      emailOrContact: Yup.string()
-        .test("email-or-phone", "Invalid email or phone number", (value) => {
+      email: Yup.string()
+        .test("email", "Invalid email ", (value) => {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          const phoneRegex = /^\d{10}$/;
-          return emailRegex.test(value) || phoneRegex.test(value);
+
+          return emailRegex.test(value);
         })
         .required("Email or Contact Number is required"),
       contactNumber: Yup.string()
@@ -35,6 +35,7 @@ function CreateAc() {
         .required("Password is required"),
     }),
     onSubmit: (values) => {
+      console.log(values);
       dispatch(registeruser(values)).then(() => {
         navigate("/enterotp");
       });
@@ -46,7 +47,9 @@ function CreateAc() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl text-red-600 text-center mb-6">Create Account</h2>
+        <h2 className="text-2xl text-red-600 text-center mb-6">
+          Create Account
+        </h2>
         <form onSubmit={formik.handleSubmit} className="space-y-4">
           {/* Full Name */}
           <div className="flex flex-col gap-2">
@@ -59,22 +62,26 @@ function CreateAc() {
               {...formik.getFieldProps("fullName")}
             />
             {formik.touched.fullName && formik.errors.fullName && (
-              <p className="text-red-500 text-xs mt-1">{formik.errors.fullName}</p>
+              <p className="text-red-500 text-xs mt-1">
+                {formik.errors.fullName}
+              </p>
             )}
           </div>
 
           {/* Email or Contact */}
           <div className="flex flex-col gap-2">
-            <label className="text-zinc-500 font-medium">Email or Contact Number</label>
+            <label className="text-zinc-500 font-medium">
+              Email or Contact Number
+            </label>
             <input
               type="text"
               name="emailOrContact"
-              placeholder="Enter Email or Contact Number"
+              placeholder="Enter Email "
               className="w-full p-2 border border-zinc-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-              {...formik.getFieldProps("emailOrContact")}
+              {...formik.getFieldProps("email")}
             />
-            {formik.touched.emailOrContact && formik.errors.emailOrContact && (
-              <p className="text-red-500 text-xs mt-1">{formik.errors.emailOrContact}</p>
+            {formik.touched.email && formik.errors.email && (
+              <p className="text-red-500 text-xs mt-1">{formik.errors.email}</p>
             )}
           </div>
 
@@ -89,7 +96,9 @@ function CreateAc() {
               {...formik.getFieldProps("contactNumber")}
             />
             {formik.touched.contactNumber && formik.errors.contactNumber && (
-              <p className="text-red-500 text-xs mt-1">{formik.errors.contactNumber}</p>
+              <p className="text-red-500 text-xs mt-1">
+                {formik.errors.contactNumber}
+              </p>
             )}
           </div>
 
@@ -104,7 +113,9 @@ function CreateAc() {
               {...formik.getFieldProps("password")}
             />
             {formik.touched.password && formik.errors.password && (
-              <p className="text-red-500 text-xs mt-1">{formik.errors.password}</p>
+              <p className="text-red-500 text-xs mt-1">
+                {formik.errors.password}
+              </p>
             )}
           </div>
 

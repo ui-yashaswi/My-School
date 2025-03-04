@@ -9,7 +9,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { decrementCount, incrementCount } from "../../rtk/slices/cartSlice.js";
-const AddToCard_pay = () => {
+const BuyNowPay= () => {
   const { itemscount } = useSelector((slice) => slice.cart);
   const dispatch = useDispatch();
   // const [quantity, setQuantity] = useState(0);
@@ -186,4 +186,4 @@ const AddToCard_pay = () => {
   );
 };
 
-export default AddToCard_pay;
+export default BuyNowPay;

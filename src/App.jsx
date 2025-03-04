@@ -21,6 +21,7 @@ import DrawAndEarn from "./Pages/Home/Sections/ArtAndPaint/DrawAndEarn";
 import PrintGall from "./Pages/HomeNav.jsx/PrintGall";
 import PreSchool from "./Pages/Home/Sections/SchoolPackage/PreSchool";
 import PrimarySchool from "./Pages/Home/Sections/SchoolPackage/PrimarySchool";
+import BuyNowPay from "./Pages/Products/AddToCartPay";
 import PrePrimary from "./Pages/Home/Sections/SchoolPackage/PrePrimary";
 import HighSchool from "./Pages/Home/Sections/SchoolPackage/HighSchool";
 import DIY from "./Pages/Home/Sections/DrawingCraft/DIY";
@@ -28,6 +29,7 @@ import DrawingSpace from "./Pages/Home/Sections/DrawingCraft/DrawingSpace";
 import DoItYourself from "./Pages/Home/Sections/ActivityBlog/DoItYourself";
 import Origami from "./Pages/Home/Sections/ActivityBlog/Origami";
 import MyOrders from "./Pages/MyOrder/MyOrders";
+import ViewCartItems from "./Pages/Products/ViewCartItems";
 
 // import NotFound from "./pages/NotFound/NotFound";
 
@@ -64,6 +66,16 @@ function App() {
     {
       path: "/cartdetails",
       element: <Cartdetails />,
+    },
+    {
+      path: "/viewcart",
+      element: <ViewCartItems/>
+    },
+
+
+    {
+      path: "/buynow",
+      element: <BuyNowPay/>
     },
     {
       path: "/creataccount",

@@ -20,11 +20,11 @@ function NavLg({ login }) {
         {!login ? (
           <div className="flex gap-4  items-center text-[16px]">
             <Link to={"/creataccount"}>
-              <button className=" text-[#262627]">Sign up</button>
+              <button className=" cursor-pointer text-[#262627]">Sign up</button>
             </Link>
 
             <Link to="/login">
-              <button className="bg-[#e1482f] text-white px-6 py-2 rounded-sm">
+              <button className="bg-[#e1482f] cursor-pointer text-white px-6 py-2 rounded-sm">
                 Login
               </button>
             </Link>
@@ -37,7 +37,7 @@ function NavLg({ login }) {
             <Link to="/profile">
               <FaRegUserCircle />
             </Link>
-            <Link to={"/cartdetails"} className="relative">
+            <Link to={"/viewcart"} className="relative">
               {itemscount > 0 && (
                 <div className="bg-red-600 absolute text-white text-xs flex top-0 left-5 w-4 h-4 pl-1 rounded-full items-center">
                   {itemscount}

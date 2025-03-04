@@ -17,6 +17,20 @@ export const addToCart = createAsyncThunk(
   }
 );
 
+export const removeproduct = createAsyncThunk(
+  "cart/removeproduct",
+  async (values, { rejectWithValue, fulfillWithValue }) => {
+    try {
+      const { data } = await api.delete("/api/v1/auth/login", values, {
+        withCredentials: true,
+      });
+      return fulfillWithValue(data);
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
 
 
 export const decreaseCartItem = createAsyncThunk(
