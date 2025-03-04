@@ -16,13 +16,13 @@ function Login() {
         />
 
         <Link to="/enterotp">
-          <button className="bg-[#f6c8c1]  w-[55vw] lg:w-[26vw] text-white text-center text-lg hover:bg-red-700 cursor-pointer py-3 rounded-sm">
+          <button className="bg-[#f6c8c1] focus:bg-zinc-200 w-[55vw] lg:w-[26vw] text-white text-center text-lg hover:bg-red-700 cursor-pointer py-3 rounded-sm">
             Request OTP
           </button>
         </Link>
 
         <Link to={"/creataccount"}>
-          <h1 className="text-red-400 text-xl hover:text-red-500 cursor-pointer">
+          <h1 className="text-red-500 text-xl hover:text-red-600 cursor-pointer">
             Create Account
           </h1>
         </Link>

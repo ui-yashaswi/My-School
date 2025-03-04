@@ -57,11 +57,14 @@ function Carousel() {
                   Shop Now
                 </button>
               </Link>
-              <div>
+              <Link to={"/about"}>
+
+
+
                 <button className="bg-transparent text-[#e24c30] hover:border-none hover:bg-[#e24c30] hover:text-white hover:cursor-pointer text-lg w-40 lg:w-48 py-3 border-[#e24c30] border-2 rounded-sm">
                   Explore More
                 </button>
-              </div>
+              </Link>
             </div>
           </div>
 
