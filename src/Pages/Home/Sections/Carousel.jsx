@@ -48,7 +48,7 @@ function Carousel() {
           </div>
 
           <div className=" absolute bottom-0 left-0 opacity-90  h-40 w-full bg-white"></div>
-          <div className=" absolute bottom-10 left-1 lg:left-6 h-28 w-full flex flex-col lg:gap-5 gap-2 text-white text-3xl lg:text-5xl bg-amber-0">
+          <div className=" absolute bottom-10 left-1 lg:left-6 h-28 w-full flex flex-col lg:gap-5 gap-2 text-zinc-800 text-3xl lg:text-5xl bg-amber-0">
             {headline}
 
             <div className=" w-full flex gap-2 lg:gap-6 mt-3">
